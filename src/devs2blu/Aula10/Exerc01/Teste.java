@@ -28,11 +28,11 @@ public class Teste {
 		LocalDate dataInicio = LocalDate.of(2024, 01, 01);
 		LocalDate dataFinal = LocalDate.of(2024, 05, 30);
 		
-		ProjetoPesquisa projetoDev = new ProjetoPesquisa(1, dataInicio, dataFinal, prof01, oMelhorGrupo);
+		ProjetoPesquisa projetoDev = new ProjetoPesquisa(1, "API SPRING JAVA", dataInicio, dataFinal, prof01, oMelhorGrupo);
 		
-		ProjetoPesquisa projetoDB = new ProjetoPesquisa(2, dataInicio, dataFinal, prof02, oMelhorGrupo);
+		ProjetoPesquisa projetoDB = new ProjetoPesquisa(2, "BANCO DE DADOS POSTGRESQL", dataInicio, dataFinal, prof02, oMelhorGrupo);
 		
-		ProjetoPesquisa projetoEnglish = new ProjetoPesquisa(3, dataInicio, dataFinal, prof03, oMelhorGrupo);
+		ProjetoPesquisa projetoEnglish = new ProjetoPesquisa(3, "PITCH IN ENGLISH", dataInicio, dataFinal, prof03, oMelhorGrupo);
 		
 		System.out.println( projetoDev.toString() );
 		System.out.println( projetoDB.toString() );

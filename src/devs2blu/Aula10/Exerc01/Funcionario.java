@@ -3,7 +3,7 @@ package devs2blu.Aula10.Exerc01;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-public class Funcionario {
+public class Funcionario{
 
 	private BigDecimal salario;
 	private BigInteger matricula;
@@ -38,7 +38,12 @@ public class Funcionario {
 
 	@Override
 	public String toString() {
-		return "Funcionario [salario=" + salario + ", matricula=" + matricula + "]";
+		
+		return String.format("Funcionario [salario=%2.f, matricula=%s]"
+				, this.getSalario()
+				, this.getMatricula());
+		
 	}
-
+	
+	
 }

@@ -14,6 +14,10 @@ public class Aluno implements Pesquisador {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	public Boolean estaVazio() {
+		return this.getNome().equals("");
+	}
 
 	@Override
 	public String getNome() {
@@ -27,7 +31,10 @@ public class Aluno implements Pesquisador {
 
 	@Override
 	public String toString() {
-		return "Aluno [nome=" + nome + "]";
+		
+		return String.format("Aluno [nome=%s]"
+				, this.getNome()
+				);
 	}
 
 	

@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public class ProjetoPesquisa {
 
 	private Integer codigo;
+	private String nome;
 	private LocalDate dataInicio;
 	private LocalDate dataFinal;
 	private Professor professor;
@@ -17,15 +18,25 @@ public class ProjetoPesquisa {
 		equipe = new ArrayList<>();
 	}
 
-	public ProjetoPesquisa(Integer codigo, LocalDate dataInicio, LocalDate dataFinal, Professor professor,
+	public ProjetoPesquisa(Integer codigo, String nome, LocalDate dataInicio, LocalDate dataFinal, Professor professor,
 			List<Pesquisador> equipe) {
-		this();
 
+		this();
+		
 		this.codigo = codigo;
+		this.nome = nome;
 		this.dataInicio = dataInicio;
 		this.dataFinal = dataFinal;
 		this.professor = professor;
 		this.equipe = equipe;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public Integer getCodigo() {
@@ -70,10 +81,18 @@ public class ProjetoPesquisa {
 
 	@Override
 	public String toString() {
-		return "ProjetoPesquisa [codigo=" + codigo + ", dataInicio=" + dataInicio + ", dataFinal=" + dataFinal
-				+ ", professor=" + professor + ", equipe=" + 
-				equipe.stream().map(Object::toString).collect(Collectors.joining(" , ")) 
-				+ "]";
+
+		String msg = "ProjetoPesquisa [codigo=%d, nome=%s, dataInicio=%s, dataFinal=%s, %s, equipe=%s]";
+				
+		return String.format(msg
+				, this.getCodigo()
+				, this.getNome()
+				, this.getDataInicio()
+				, this.getDataFinal()
+				, this.getProfessor().toString()
+				, equipe.stream().map(Object::toString).collect(Collectors.joining(" , "))
+						);
+				
 	}
 
 }

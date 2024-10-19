@@ -36,4 +36,12 @@ public class Professor extends Funcionario implements Pesquisador {
 		return "Professor";
 	}
 
+	@Override
+	public String toString() {
+		return String.format("Professor [nome=%s])"
+				, this.getNome()
+				);
+	}
+
+	
 }
