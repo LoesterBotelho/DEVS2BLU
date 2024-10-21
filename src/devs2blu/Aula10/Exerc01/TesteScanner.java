@@ -1,3 +1,7 @@
+/*
+ * Autor : Loester Franco Botelho - JAVA
+ */
+
 package devs2blu.Aula10.Exerc01;
 
 import java.math.BigDecimal;
@@ -13,6 +17,8 @@ public class TesteScanner {
 
 	private static Scanner entrada;
 	final static String BARRA = "-----------------------------------";
+	final static String QUEBRA_LINHA_DUPLA = "\n\n";
+	final static String QUEBRA_LINHA = "\n";
 	final static String STRING_EMPTY = "";
 	
 	public static void main(String[] args) throws MinhaExcecao {
@@ -48,6 +54,13 @@ public class TesteScanner {
 		
 		entrada.close();
 	}
+	
+	public static void imprimirAutor() {
+		imprimir("Autor : Loester Botelho - Java \n");
+		imprimir(BARRA);
+		imprimir(QUEBRA_LINHA_DUPLA);
+	} 
+	
 	
 	public static Professor retornarProf(Integer opcao) throws MinhaExcecao {
 		
@@ -261,8 +274,12 @@ public class TesteScanner {
 			
 		} while (flagVazioProjeto);
 		
+		imprimir(QUEBRA_LINHA_DUPLA);
 		
-		imprimir("\n\nResultados\n");
+		imprimir("Resultados");
+		
+		imprimir(QUEBRA_LINHA);
+		
 		
 		// foreach
 		

@@ -1,3 +1,7 @@
+/*
+ * Autor : Loester Franco Botelho - JAVA
+ */
+
 package devs2blu.Aula10.Exerc01;
 
 import java.math.BigDecimal;
@@ -10,6 +14,8 @@ public class Teste {
 
 	public static void main(String[] args) {
 
+		imprimirAutor();
+		
 		Professor prof01 = new Professor( new BigDecimal("7000.0") , new BigInteger("74982164") , "Heloisa" );
 		Professor prof02 = new Professor( new BigDecimal("7000.0") , new BigInteger("74982164") , "Abelardo" );
 		Professor prof03 = new Professor( new BigDecimal("7000.0") , new BigInteger("74982164") , "Vilson" );
@@ -40,4 +46,9 @@ public class Teste {
 		
 	}
 
+	public static void imprimirAutor() {
+		System.out.printf("Autor : Loester Botelho - Java \n");
+		System.out.printf("............................................ \n\n");
+	} 	
+	
 }

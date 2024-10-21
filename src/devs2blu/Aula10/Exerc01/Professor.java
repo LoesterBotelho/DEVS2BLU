@@ -1,3 +1,7 @@
+/*
+ * Autor : Loester Franco Botelho - JAVA
+ */
+
 package devs2blu.Aula10.Exerc01;
 
 import java.math.BigDecimal;
