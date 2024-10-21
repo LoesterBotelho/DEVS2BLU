@@ -70,4 +70,9 @@ public class Student implements StudentInterface {
 		System.out.println( "Aluno " + this.getName() + " está Bebendo : " +  eat.toString() );
 	}
 
+	@Override
+	public void running() {
+		System.out.println( "Aluno " + this.getName() + " está Correndo.");
+	}
+
 }

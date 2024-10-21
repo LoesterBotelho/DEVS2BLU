@@ -5,5 +5,6 @@ public interface StudentInterface {
 	void mostraInfo();
 	void eating(Food food);
 	void drinking(Eat eat);
+	void running();
 	
 }
